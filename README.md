@@ -1,5 +1,9 @@
 # Modeling-probability-of-default
 
+DATASET SOURCE: https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-data.html
+
+
+
 ### Group Name: 
 Team 7
 
@@ -23,9 +27,9 @@ PGadmin/PostGress, Google Colabs/Jupyter Notebook, Amazon AWS, Github, Microsoft
 
 Postgress: Database Management, Organizing tables, removing columns which dont provide value
 
-Google Co-Labs/ Jupyter Notebook: Data cleaning and Machine Learning algorith execution
+Google Co-Labs/ Jupyter Notebook: Data cleaning and Machine Learning algorith execution will be set up using Python, pandas and Scikit Learn libraries
 
-Amazon AWS: Database, csv and other file storage
+Amazon AWS: Database, CSV and other data file storage
 
 Github: Creating and maintaining Git repository for submission and project colaboration
 
