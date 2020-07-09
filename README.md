@@ -5,9 +5,13 @@ Team 7
 
 ### Group Members: 
 
+
 Azaima Azghar: Square Role; Repository Manager
+
 Colin Wallace : Triangle role; Machine Learning Architect
+
 Kalkidan Alemayehu: Circle role; Database Manager
+
 Osama Ali: X role ; Technology Manager
 
 
@@ -28,3 +32,4 @@ Github: Creating and maintaining Git repository for submission and project colab
 Microsoft Excel: Evaluating our dataset on a high level.
 
 #### How will the dashboard be built?
+
