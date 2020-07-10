@@ -21,6 +21,8 @@ Osama Ali: X role ; Technology Manager
 
 
 #### Which tools are the best fit for your project? 
+H
+(Enter logos)
 
 PGadmin/PostGress, Google Colabs/Jupyter Notebook, Amazon AWS, Github, Microsoft Excel
 
