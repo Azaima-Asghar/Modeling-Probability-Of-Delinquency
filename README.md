@@ -14,4 +14,6 @@
 * Visual Studio Code
 * Microsoft Excel
 
-The acquisition data and the performance data are merged on common feature 'LOAN IDENTIFIER'
+The acquisition data and the performance data are merged on common feature 'LOAN IDENTIFIER'. 
+
+We plan to get more satasets for mortgage and merge them as well down the road to include macro variables such as employment and unemployment. 
