@@ -3,9 +3,10 @@
 ## *Resources*
 
 * Data Source: Mortgage Data From Fannie Mae.
+
     
-    * Acquisition Data
-    * Performance Data
+    * Acquisition and Performance Data 
+     https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-data.html
 
 * PGadmin/PostGress
 * Google Colabs/Jupyter Notebook
