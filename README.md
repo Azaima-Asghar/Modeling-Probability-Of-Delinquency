@@ -1,10 +1,32 @@
 # *Modeling Probablity Of Default*
 
+## *Group Name: Team 7*
+
+## *Group Members*
+
+Azaima Azghar: Square Role; Repository Manager.
+
+Colin Wallace: Triangle role; Machine Learning Architect.
+
+Kalkidan Alemayehu: Circle role; Database Manager.
+
+Osama Ali: X role; Technology Manager.
+
+## *Selected topic*
+
+
+Modeling probability of  mortgage application
+default.
+
+## *Reason To Select This Topic*
+
+There is a risk in housing market where the applicant of a mortgage application could default on their mortgage payments or the whole loan altogether. Team 7 is going to look into past data of USA mortgage market to see if a common lifestyle or pattern exists to those files which ended up being put in default or bankcrupt status.
+
 ## *Resources*
 
 * Data Source: Mortgage Data From Fannie Mae.
 
-    * Acquisition and Performance Data
+    * Acquisition and Performance Data.
 
 * pgAdmin/postgressSQL.
 * Google Colabs/Jupyter Notebook.
