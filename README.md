@@ -1,6 +1,26 @@
 # Modeling-probability-of-default
 
-DATASET SOURCE: https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-data.html
+
+
+### Group Name: 
+
+Team 7
+
+![](machine_learning_overview.png)
+
+
+
+### Group Members: 
+
+
+Azaima Azghar: Square Role; Repository Manager
+
+Colin Wallace : Triangle role; Machine Learning Architect
+
+Kalkidan Alemayehu: Circle role; Database Manager
+
+Osama Ali: X role ; Technology Manager
+
 
 
 ### ✓ Selected topic : 
@@ -24,26 +44,6 @@ How often do mortgages go into default status?
 Is income to loan ratio a major factor to determine risk factor?
 
 Are some states better in maintaining and finishing their term than others?
-
-
-
-
-### Group Name: 
-
-Team 7
-
-![](machine_learning_overview.png)
-
-### Group Members: 
-
-
-Azaima Azghar: Square Role; Repository Manager
-
-Colin Wallace : Triangle role; Machine Learning Architect
-
-Kalkidan Alemayehu: Circle role; Database Manager
-
-Osama Ali: X role ; Technology Manager
 
 
 #### Which tools are the best fit for your project? 
