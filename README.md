@@ -32,6 +32,8 @@ Are some states better in maintaining and finishing their term than others?
 
 Team 7
 
+![](machine_learning_overview.png)
+
 ### Group Members: 
 
 
