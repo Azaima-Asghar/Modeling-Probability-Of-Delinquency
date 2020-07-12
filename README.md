@@ -5,11 +5,13 @@ The ERD of the database shows physical diagrams portraying the physical relation
 
 For our next steps we will be adding more datasets to our database,  to create multiple relationships between them. 
 
+## ERD
+![ERD ](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/Kalkidanalemaye/ERD.png)
+
 ## Pgadmin
 Using pgadmin we will create the relationship schema of the datasets, which are imported as tables. The server on pgadmin will be hosted on AWS. The database will be shared publicly with flask. The flask app will be coded using VS Code. 
 
 ![Schema](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/Kalkidanalemaye/pgamin%20schema.jpg)
 
-## ERD
-![ERD ](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/Kalkidanalemaye/ERD.png)
+
 
