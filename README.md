@@ -71,7 +71,7 @@ PLAN: The acquisition data and the performance data are merged on common feature
 
 Dashboard will probably be built using python plotly and dash.
 
-## *Description of the communication protocols.*
+## *Description Of The Communication Protocols.*
 
 Team 7 has a shared slack channel that includes all four members of the team: Colin Wallace (Triangle role), Kalkidan Alemayehu (Circle role), Osama Ali (X role) and Azaima Asghar (Square Role). We communicate through this channel and all four of us are very active in this channel, we discuss our progress and our difficulties with others. We also do some meetings every other day or when it is required to meet to discuss the next steps. Everyone is happy to help each other if someone faces some issue. Going forward, we plan to learn plotly dash to create the dashboard for our project, since we will be learning something new we all will be trying to understand it and work together to create the dashboard. 
 
