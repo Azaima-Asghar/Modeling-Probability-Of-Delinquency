@@ -113,6 +113,7 @@ The results of this neural network during and after fitting are expected given t
 
 ## StoryBoard
 
+#### To create our storyboard we used an online interactive program called draw.io. 
 The image below shows our storyboard for our potential dashboard. The dashboard will be interactive by using a filter bar located above the charts.
 
 ![storyboard](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/XWeek2/storyboard1.jpg)
