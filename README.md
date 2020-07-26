@@ -93,13 +93,13 @@ For our next steps we will be adding more datasets to our database, to create mu
 
 Using pgadmin we will create the relationship schema of the datasets, which are imported as tables. The server on pgadmin will be hosted on AWS. The database will be shared publicly with flask. The flask app will be coded using VS Code.
 
+![Project Overview](Images/pgAdmin.png)
+
 ## Weeks 2-3
 
 Colin used his AWS account, and set up a RDS on a Canada (Central) server. The DB, named team7, is postgreSQL, and currently contains three tables. The acquisition and performance tables are extracted, cleaned, and slightly transformed from the original Fannie Mae dataset. The .ipynb code performing this ETL can be found in "Cleaned_Performance_data.ipynb" and "Cleaning Acquisition Data.ipynb".
 
 The third data table, "merged", is the result of an ETL process in "MergedData.ipynb". This is intended to be the data imported and used in the machine learning model.
-
-![Project Overview](Images/pgAdmin.png)
 
 ## *Machine Learning Model*
 
