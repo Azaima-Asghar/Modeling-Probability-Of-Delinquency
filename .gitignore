@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 # Adding config.py file.
 Config.py
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Adding config.py file.
+Config.py
+=======
+>>>>>>> parent of 9041be5... Merge branch 'master' of https://github.com/Azaima-Asghar/Modeling-probability-of-default
+=======
+>>>>>>> parent of 0444ebb... Merge pull request #4 from Azaima-Asghar/SquareWeek2-Osama
+>>>>>>> 300299aa70656d2264ffb009a2a49f15d303518c
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
