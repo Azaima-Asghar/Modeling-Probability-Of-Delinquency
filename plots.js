@@ -1,45 +1,56 @@
-// init();
+init();
 
-// function init() {
-//   var selector = d3.select("#selDataset");
+function init() {
+  var selector = d3.select("#selDataset");
 
   d3.csv('cleaned_merged_data.csv').then(data => {
     data = data.slice(0,200);
     
-    console.log(data)
+    console.log(data);
 
-    
-    data.forEach(val => {
+    var sampleSeller = data.forEach(val => {
       d3.select('select').append('option').text(val.seller_name);
     });
 
 
-  // buildCharts(data[0]);
-  // buildBubble(data[0]);
+  buildCharts(sampleSeller[0]);
+  buildBubble(sampleSeller[0]);
 
 })
+}
 
-
-function optionChanged(newData) {
-  buildCharts(newData);
-  buildBubble(newData);
+function optionChanged(newSeller) {
+  buildCharts(newSeller);
+  buildBubble(newSeller);
  // buildGauge(newLoan);
 };
 
 
-//function buildCharts(dataset) {
+function buildCharts(sampleSeller) {
 
   d3.csv('cleaned_merged_data.csv').then(data => {
     data = data.slice(0,200);
   
-    console.log(data)
+    console.log(data);
 
     var barData = [
       {
-        x: data.seller_name, //.slice(0,10).reverse(),
-        y: data.product_type, //.map(original_interest_rate => "OTR " + original_interest_rate),
-        type: 'line',
-        orientation: 'h'
+        x: ['TX',
+        'NC',
+        'IL',
+        'TX',
+        'IN',
+        'UT'
+        ],
+        y: [307000,
+        256000,
+        248000,
+        264000,
+        174000,
+        204000
+        ],
+        type: 'bar',
+        //orientation: 'h'
       }
     ];
 
@@ -49,27 +60,51 @@ function optionChanged(newData) {
     };
 
     Plotly.newPlot('bar',barData,barLayout);
-  });
+  })};
 
 
 
-// function buildBubble(sellers) {
+function buildBubble(sampleSeller) {
 
 
       d3.csv('cleaned_merged_data.csv').then(data => {
         data = data.slice(0,200);
 
-        console.log(data)
+        console.log(data);
         
         var bubbleData = [
            {
-             x: data.original_upb,
-             y: data.original_interest_rate,
+            x: ['TX',
+            'NC',
+            'IL',
+            'TX',
+            'IN',
+            'UT'
+            ],
+            y: [307000,
+            256000,
+            248000,
+            264000,
+            174000,
+            204000
+            ],
              text: data.seller_name,
              mode: 'markers',
              marker: {
-             size: data.borrower_credit_score_at_origination,
-             color: data.original_dir,
+             size: ['44',
+             '41',
+             '40',
+             '45',
+             '37',
+             '42'
+             ],
+             color: ['722',
+             '728',
+             '730',
+             '710',
+             '747',
+             '717'
+             ],
              colorScale: 'Earth'
                      }
            }
@@ -84,7 +119,7 @@ function optionChanged(newData) {
 
        Plotly.newPlot('bubble',bubbleData, bubbleLayout);
 
-     });
+     })};
 
 
 // seller_name: "OTHER"
