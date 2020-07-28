@@ -2,6 +2,8 @@
 
 ## *Group Name: Team 7*
 
+## *First Segment*
+
 ## *Group Members*
 
 Azaima Azghar: Square Role; Repository Manager.
@@ -95,7 +97,17 @@ Using pgadmin we will create the relationship schema of the datasets, which are 
 
 ![Project Overview](Images/pgAdmin.png)
 
-## Weeks 2-3
+## *Second Segment*
+
+Azaima Azghar: Circle role; Analysis -- Repository(CircleWeek2).
+
+Colin Wallace: Triangle role; Database -- Repository(TriangleWeek2).
+
+Kalkidan Alemayehu: X role; Dashboard -- Repository(XWeek2).
+
+Osama Ali: Square role; Machine Learning -- Repository(SquareWeek2).
+
+## *Refine The Machine Learning Model*
 
 Colin used his AWS account, and set up a RDS on a Canada (Central) server. The DB, named team7, is postgreSQL, and currently contains five tables. The "acquisition" and "performance" tables are extracted, cleaned, and slightly transformed from the original Fannie Mae dataset. The .ipynb code performing this ETL can be found in "Cleaned_Performance_data.ipynb" and "Cleaning Acquisition Data.ipynb".
 
@@ -132,3 +144,62 @@ The zoomed in image shows how the interactive portion of our dashboard would wor
 
 ![storyboard](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/XWeek2/storyboard2.jpg)
 
+## *Analysis*
+
+After connecting with the database, the merged dataset containing the acquisition data and the performance data is placed into a pandas dataframe which is then cleaned. All the null values present the rows are removed. Exploratory analysis is carried out on the cleaned dataset. 
+
+#### *Property Type*
+
+![Property_Type](Images/Property_Type.png)
+
+Propert type is a field that denotes whether the property type securing the mortgage loan is a cooperative share, condominium, planned urban development, single-family home, or manufactured home.Most mortgages are for Single-Family property type. PUD is the second popular property type and Manufactured-Housing have a small number of mortgages where as Co-Op has the least mortgages approved for.
+
+The number of units comprising the related mortgaged property: There are 37407 mortgages that have one number of unit comprising the property, there are 150 mortgages with two number of units and there are very few 3 or 4 number of units for the related mortgaged property.
+
+#### *Occupancy Type*
+
+![Occupancy_Type](Images/Occupancy_Type.png)
+
+Occupancy Type is an indicator that denotes whether the mortgage loan, at its origination date, is secured by a principal residence, second home or investment property.There are 35914 mortgages with secured by a principal residence (P), there are 1423 mortgages with second home (S) occupancy type and there are very few (225) investor (I) occupancy type.
+
+#### *Property State*
+
+![Property_State](Images/Property_State.png)
+
+Property state is a two-letter abbreviation indicating the state or territory within which the property securing the mortgage loan is located. The most popular property states for the mortgages are CA, TX and FL where the least popular ones are ND and PR.
+
+#### *Delinquency*
+
+![Delinquency](Images/Delinquency.png) 
+
+There are 6747 mortgages that have failed to pay an outstanding debt where as 30815 mortgages are paying on time to the bank.
+
+#### *First Time Home Buyers*
+
+![First_time_buyer](Images/First_time_buyer.png)
+
+First time home buyer is an indicator that denotes if the borrower or co-borrower qualifies as a first-time homebuyer.There are 21852 first time home buyers mortgages and 15710 mortgages are not for first time home buyers.
+
+#### *Origination Channel*
+
+![Origination_channel](Images/Origination_channel.png)
+
+18165 mortgages have correspondent (C) as thier origination channel, 15968 number of mortgages have retail (R) as thier origination channel where as only 3429 number mortgages have broker (B) as thier origination channel. Therefore the most popoluar origination channel is correspondent (C) and the least popular origination channel is broker (B) in this mortgage dataset.
+
+#### *The Borrower Credit Score at Origination*
+
+The borrower credit score at origination is a numerical value used by the financial services industry to evaluate the quality of borrower credit. Credit scores are typically based on a proprietary statistical model that is developed for use by credit data repositories. The borrower credit score at origination has a mean of 743, the maximum borrower credit score is 832 and the minimum borrower credit score is 620 in the mortgages dataset. Therefore most of the mortgages have a decent the borrower credit score at origination.
+
+#### *Original Debt To Income Ratio*
+
+Original debt to income ratio is a ratio calculated at origination derived by dividing the borrower’s total monthly obligations (including housing expense) by his or her stable monthly income. This calculation is used to determine the mortgage amount for which a borrower qualifies. The mean of original debt to income ratio is 38.4 with a maximum ratio of 50 and minimum ratio of 1.
+
+#### *Loan Age*
+
+![Loan_Age](Images/Loan_Age.png)
+
+Loan age is the number of calendar months since the mortgage loan's origination date. For purposes of calculating this data element, origination means the date on which the first full month of interest begins to accrue.The loan age has mean of 9.88 months and most of the mortgages have loan age of 11 to 9.
+
+#### *Original Combined Loan-to-Value (CLTV)*
+
+Original Combined Loan-to-Value (CLTV) is a ratio calculated at the time of origination for a mortgage loan. The CLTV reflects the loan-to-value ratio inclusive of all loans secured by a mortgaged property on the origination date of the underlying mortgage loan.The. mean of original combined loan-to-value is 94 and most of the mortgages have this ratio.
