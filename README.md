@@ -210,4 +210,4 @@ Link to the google slides: https://docs.google.com/presentation/d/1iNZQTNkwcgDTv
 
 The first google slide looks like the following:
 
-![Google_slides](Images/google_slides.png)
+![Google_slides](Images/Google_slides.png)
