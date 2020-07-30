@@ -6,13 +6,13 @@
 
 ## *Group Members*
 
-Azaima Azghar: Square Role; Repository Manager.
+Azaima Azghar: Repository Manager.
 
-Colin Wallace: Triangle role; Machine Learning Architect.
+Colin Wallace: ; Machine Learning Architect.
 
-Kalkidan Alemayehu: Circle role; Database Manager.
+Kalkidan Alemayehu:  Database Manager.
 
-Osama Ali: X role; Technology Manager.
+Osama Ali:  Technology Manager.
 
 ## *Selected topic*
 
@@ -34,11 +34,17 @@ Link: https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-
 
 ## *Questions The Data hopes To Answer*
 
-How often do mortgages go into default status?
+#### How often do mortgages go into default status?
 
-Is income to loan ratio a major factor to determine risk factor?
+----- In the last part of our jupyter file we have just finished evaluating the percentage of delinquncy per state. The country as a whole has a 21.44% True response when ending up in default status. Some states are performing better than others.
 
-Are some states better in maintaining and finishing their term than others?
+#### Is income to loan ratio a major factor to determine risk factor?
+
+----- Our machine Learning Model indicates a 76% accuracy when comparing income to delinquency ratio, which is not insignificant. A little more grooming needs to be done to the model but we belive there might be a strong connection between income and default ratio.
+
+#### Are some states better in maintaining and finishing their term than others?
+
+----- We have started to compare between states. There does seem to be some states which perform better at mitigating the delinquency vs others. we have to determine the root causes for the differences. It could vary from state law, corruption, income, bank policies etc.
 
 ## *Resources*
 
@@ -119,18 +125,18 @@ There are two additional tables: "performancemostrecent" and "mergedmostrecent".
 
 ## *Machine Learning Model*
 
-MachineLearning.ipynb, a Python Notebook, is a mockup for the machine learning model segment of our group's pipeline. This file imports the Fannie Mae Acquisition Data (currently reads from a local .csv file, but will be updated to import from our server).
+MachineLearning.ipynb, a Python Notebook, is a mockup for the machine learning model segment of our group's pipeline. This file imports the Fannie Mae Acquisition Data. The Data is being acquired into our notebook from PostGresSql which itself is being stored in AWS S3 Storage.
 
-Some rough filtering is done (e.g. dropping rows with any NA values). All columns identified as "object" datatypes are encoded, then merged with the non-object columns of the Acquisition data.
+We intially drop all columns with low value to our model and high NAN values to trim our data. Then we moved on to remove all NAN valued rows to keep our model accuracy as high as possible. All columns identified as "object" datatypes are encoded, then merged with the non-object columns of the Acquisition data.
 
-A "Foreclosure" boolean is randomly generated for each row. For our final presentation, this will instead be a boolean transformed from each loan's Performance data.
+A "Delinquency" boolean is a generated from each loan's Performance data.
 
-The data is split into the target array ("Foreclosure"), and the feature matrix. The data is further split into training and testing sets, before being scaled according to the training data. A logistic regression is modelled, but doesn't appear to fit correctly. The deep neural network model provides improved results.
+The data is split into the target array ("Delinquency"), and the feature matrix. The data is further split into training and testing sets, before being scaled according to the training data. A logistic regression is modelled, but doesn't appear to fit correctly. The deep Forest model provides improved results.
 
 
-The current model takes 139 variables of input, densely connected to a layer of 24 Tanh neurons, followed by another dense layer of 8 Tanh neurons. The final output neuron is a single sigmoid, predicting classification. This structure, and the hyperparameters used while fitting, are likely to change as we transform the input data and try to improve results.
+The current model takes 139 variables of input, densely connected to a layer of RelU neurons, followed by another 7 dense layers of Tanh neurons. The final output neuron is a single sigmoid, predicting classification. This structure, and the hyperparameters used while fitting, are likely to change as we transform the input data and try to improve results.
 
-The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 94% after 100 epochs. This fit sounds promising, until testing using the validation data returns a 61% accuracy. However, this makes sense since the target array is randomly generated. There are no broad patterns to find, so the model "improves" by overfitting the training data.
+The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 76% after 100 epochs. Our loss is still 48% which is very high, we will need to fine tune it more.
 
 ## StoryBoard
 
