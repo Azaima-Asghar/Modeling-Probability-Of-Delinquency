@@ -152,7 +152,7 @@ After connecting with the database, the merged dataset containing the acquisitio
 
 ![Property_Type](Images/Property_Type.png)
 
-Propert type is a field that denotes whether the property type securing the mortgage loan is a cooperative share, condominium, planned urban development, single-family home, or manufactured home.Most mortgages are for Single-Family property type. PUD is the second popular property type and Manufactured-Housing have a small number of mortgages where as Co-Op has the least mortgages approved for.
+Property type is a field that denotes whether the property type securing the mortgage loan is a cooperative share, condominium, planned urban development, single-family home, or manufactured home.Most mortgages are for Single-Family property type. PUD is the second popular property type and Manufactured-Housing have a small number of mortgages where as Co-Op has the least mortgages approved for.
 
 The number of units comprising the related mortgaged property: There are 37407 mortgages that have one number of unit comprising the property, there are 150 mortgages with two number of units and there are very few 3 or 4 number of units for the related mortgaged property.
 
@@ -184,7 +184,7 @@ First time home buyer is an indicator that denotes if the borrower or co-borrowe
 
 ![Origination_channel](Images/Origination_channel.png)
 
-18165 mortgages have correspondent (C) as thier origination channel, 15968 number of mortgages have retail (R) as thier origination channel where as only 3429 number mortgages have broker (B) as thier origination channel. Therefore the most popoluar origination channel is correspondent (C) and the least popular origination channel is broker (B) in this mortgage dataset.
+18165 mortgages have correspondent (C) as their origination channel, 15968 number of mortgages have retail (R) as their origination channel where as only 3429 number mortgages have broker (B) as thier origination channel. Therefore the most popoluar origination channel is correspondent (C) and the least popular origination channel is broker (B) in this mortgage dataset.
 
 #### *The Borrower Credit Score at Origination*
 
@@ -198,8 +198,16 @@ Original debt to income ratio is a ratio calculated at origination derived by di
 
 ![Loan_Age](Images/Loan_Age.png)
 
-Loan age is the number of calendar months since the mortgage loan's origination date. For purposes of calculating this data element, origination means the date on which the first full month of interest begins to accrue.The loan age has mean of 9.88 months and most of the mortgages have loan age of 11 to 9.
+Loan age is the number of calendar months since the mortgage loan origination date. For purposes of calculating this data element, origination means the date on which the first full month of interest begins to accrue.The loan age has mean of 9.88 months and most of the mortgages have loan age of 11 to 9.
 
 #### *Original Combined Loan-to-Value (CLTV)*
 
 Original Combined Loan-to-Value (CLTV) is a ratio calculated at the time of origination for a mortgage loan. The CLTV reflects the loan-to-value ratio inclusive of all loans secured by a mortgaged property on the origination date of the underlying mortgage loan.The. mean of original combined loan-to-value is 94 and most of the mortgages have this ratio.
+
+## *Google Slides*
+
+Link to the google slides: https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kSP0E/edit?usp=sharing 
+
+The first google slide looks like the following:
+
+![Google_slides](Images/Google_slides.png)
