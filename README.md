@@ -217,3 +217,26 @@ Link to the google slides: https://docs.google.com/presentation/d/1iNZQTNkwcgDTv
 The first google slide looks like the following:
 
 ![Google_slides](Images/Google_slides.png)
+
+## Final Dashboard
+
+The final dashboard represents loan data based on the seller. The dropdown option includes all the banks from our dataset. For the purposes of the dashboard only 500 rows of our dataset were used. To refresh the page, click on the title. 
+
+### Bar Chart
+
+The first bar chart shows the amount of unpaid principal balance based on the state. By selecting the seller in the dropdown options, we can see which state has a high number of outstanding balances. The higher the unpaid principal balance the higher the application for loans in that particular state. For example: if we select ‘Wells Fargo Bank’ the chart will show TX and FL as the states with the highest unpaid principle. When we conducted our exploratory analysis of our data, the count of property per state were the highest in TX, FL and CA. 
+
+### Donut Chart
+
+The second donut chart compares the original interest rate and the current interest rate given by the banks. By looking at the donut chart, we can see that the bank ‘Wells Fargo Bank’ changed their interest rate as time went by. The original interest rate tends to be the same for a large percentage of the loans and in this case, 88.4% of the loans were given a 5% interest rate while 11.6% of the loans had an interest rate of 6%. The current interest rate has changed significantly as only 16.3% of the loans have a rate of 5% and the rest are either lower than the 5% rate or between 5-6% rates. 
+
+### Bubble Chart 
+
+The third bubble chart shows the loan applicant’s debt to income ratio and their credit score. The colour of the bubbles represents the borrower’s credit score and the size of the bubble represents the debt to income ratio. With this, we can visuals which borrower is most likely to consistently pay their loan and avoid the delinquency status. For example: based on ‘Wells Fargo Bank’ results we can see a cluster of borrowers with a high credit score and a high debt to income ratio. Although, this data is clustered at the high end of both variables, it is important to not that the most ideal borrower would have a lower debt to income ratio with a high credit score. 
+
+### Dashboard
+
+![Dash1](https://github.com/Azaima-Asghar/Modeling-Probability-Of-Delinquency/blob/kalkidancircleweek3/final%20dashboard%201.jpg)
+![Dash2](https://github.com/Azaima-Asghar/Modeling-Probability-Of-Delinquency/blob/kalkidancircleweek3/final%20dashboard%202.jpg)
+
+
