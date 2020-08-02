@@ -133,10 +133,11 @@ A "Delinquency" boolean is a generated from each loan's Performance data.
 
 The data is split into the target array ("Delinquency"), and the feature matrix. The data is further split into training and testing sets, before being scaled according to the training data. A logistic regression is modelled, but doesn't appear to fit correctly. The deep Forest model provides improved results.
 
-
 The current model takes 139 variables of input, densely connected to a layer of RelU neurons, followed by another 7 dense layers of Tanh neurons. The final output neuron is a single sigmoid, predicting classification. This structure, and the hyperparameters used while fitting, are likely to change as we transform the input data and try to improve results.
 
-The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 76% after 100 epochs. Our loss is still 48% which is very high, we will need to fine tune it more.
+The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 80% after only 70 epochs. 
+
+
 
 ## StoryBoard
 
@@ -209,6 +210,12 @@ Loan age is the number of calendar months since the mortgage loan origination da
 #### *Original Combined Loan-to-Value (CLTV)*
 
 Original Combined Loan-to-Value (CLTV) is a ratio calculated at the time of origination for a mortgage loan. The CLTV reflects the loan-to-value ratio inclusive of all loans secured by a mortgaged property on the origination date of the underlying mortgage loan.The. mean of original combined loan-to-value is 94 and most of the mortgages have this ratio.
+
+#### *State Analysis*
+
+State Analysis reflects and measures on all 52 States and Territories of the country to determine if there are some States which perform better than others. The country as a whole has 21.44% Delinquncy Ratio. Please see chart below for a breakdown of all the states
+
+![State_View](Images/state_vs_state.png)
 
 ## *Google Slides*
 
