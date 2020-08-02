@@ -68,7 +68,7 @@ function buildBubble(sampleSeller) {
              mode: 'markers',
              marker: {
              size: graphData.map(d => d.original_dir), // original debt to income ratio
-             color: graphData.map(d => d.original_upb), //original unpaid principal balance 
+             color: graphData.map(d => d.borrower_credit_score_at_origination), //original unpaid principal balance 
              colorScale: 'Earth',
              symbol: 'diamond'
                      }
