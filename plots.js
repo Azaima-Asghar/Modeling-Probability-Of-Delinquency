@@ -1,184 +1,143 @@
-// init();
+var data
 
-// function init() {
-//   var selector = d3.select("#selDataset");
-
-  d3.csv('cleaned_merged_data.csv').then(data => {
-    data = data.slice(0,200);
-    
-    console.log(data)
-
-    
-    data.forEach(val => {
-      d3.select('select').append('option').text(val.seller_name);
-    });
-
-
-  // buildCharts(data[0]);
-  // buildBubble(data[0]);
+d3.csv('cleaned_merged_data.csv').then(d => {
+  data = d.slice(0, 500)
+  init();
 
 })
 
 
-function optionChanged(newData) {
-  buildCharts(newData);
-  buildBubble(newData);
- // buildGauge(newLoan);
+
+function init() {
+  var selector = d3.select("#selDataset");  
+    console.log(data);
+
+    unique_names = [...new Set(data.map(d => d.seller_name))]
+      
+    var sampleSeller = unique_names.forEach(val => {
+      selector.append('option').text(val);
+    });
+  }
+
+function optionChanged(newSeller) {
+  buildCharts(newSeller);
+  buildBubble(newSeller);
+  buildDonut(newSeller);
 };
 
-
-//function buildCharts(dataset) {
-
-  d3.csv('cleaned_merged_data.csv').then(data => {
-    data = data.slice(0,200);
+function buildCharts(sampleSeller) {
   
-    console.log(data)
+    graphData = data.filter(d => d.seller_name === sampleSeller);
+
+    let x = graphData.map(d => d.property_state) //location of the property
+    let y = graphData.map(d => d.original_upb) //upb is the unpaid principal balance 
 
     var barData = [
       {
-        x: data.seller_name, //.slice(0,10).reverse(),
-        y: data.product_type, //.map(original_interest_rate => "OTR " + original_interest_rate),
-        type: 'line',
-        orientation: 'h'
+        x: x,
+        y: y,
+        type: 'bar',
       }
     ];
 
     var barLayout = {
-      title: 'Interest Rate Based on Credit Score',
+      title: 'Remaining Principal Balance Based on Location',
+      xaxis: {title: 'State'},
+      yaxis: {title: 'Unpaid Principal Balance'},
       margin: {t:30}
-    };
+        };
 
     Plotly.newPlot('bar',barData,barLayout);
-  });
+
+};
 
 
 
-// function buildBubble(sellers) {
+function buildBubble(sampleSeller) {
 
+      graphData = data.filter(d => d.seller_name === sampleSeller);
 
-      d3.csv('cleaned_merged_data.csv').then(data => {
-        data = data.slice(0,200);
-
-        console.log(data)
+      let x = graphData.map(d => d.original_dir) // original debt to income ratio
+      let y = graphData.map(d => d.borrower_credit_score_at_origination)
         
         var bubbleData = [
            {
-             x: data.original_upb,
-             y: data.original_interest_rate,
-             text: data.seller_name,
+            x: x,
+            y: y,
+             text: graphData.map(d => d.loan_purpose),
              mode: 'markers',
              marker: {
-             size: data.borrower_credit_score_at_origination,
-             color: data.original_dir,
-             colorScale: 'Earth'
+             size: graphData.map(d => d.original_dir), // original debt to income ratio
+             color: graphData.map(d => d.borrower_credit_score_at_origination), //original unpaid principal balance 
+             colorScale: 'Earth',
+             symbol: 'diamond'
                      }
            }
       ];
 
        var bubbleLayout = {
-         title: 'Loan Determiners',
+         title: 'Borrowers Financial Stance',
          hovermode: 'closest',
-         xaxis: {title: 'Loan Description'},
+         xaxis: {title: 'Original Debt to Income Ratio'},
+         yaxis: {title: 'Credit Score'},
          margin: {t:30}
        };
 
        Plotly.newPlot('bubble',bubbleData, bubbleLayout);
 
-     });
+    };
 
 
-// seller_name: "OTHER"
-// product_type: "FRM"
-// property_state: "TX"
-// property_type: "PU"
-// borrower_credit_score_at_origination: "722"
-// current_loan_delinquency_status: "0"
-// number_of_borrowers: "1"
-// original_interest_rate: "5"
-// original_upb: "307000"
-    
-//References: http://quabr.com/53211506/calculating-adjusting-the-needle-in-gauge-chart-plotly-js
-//https://com2m.de/blog/technology/gauge-charts-with-plotly/
-//https://plotly.com/javascript/gauge-charts/
+    function buildDonut(sampleSeller) {
 
-// function buildGauge(sample){
-//   d3.json("cleaned_aq.json").then(data => {
-//     var metadata = data.metadata;
-//     var washMetadata = metadata.filter(washObj => washObj.id == sample);
-//     var wFreq = washMetadata[0].wfreq;
-//     console.log(wFreq);
-        
-//     // Washing frequency per week per participant
-//     var level = wFreq * 20;
+      graphData = data.filter(d => d.seller_name === sampleSeller);
 
-//     // Trig to calc meter point
-//     var degrees = 180 - level,
-//         radius = .5;
-//     var radians = degrees * Math.PI / 180;
-//     var x = radius * Math.cos(radians);
-//     var y = radius * Math.sin(radians);
-//     var path1 = (degrees < 45 || degrees > 135) ? 'M -0.0 -0.025 L 0.0 0.025 L ' : 'M -0.025 -0.0 L 0.025 0.0 L ';
-    
-//     // Path: may  have to change to create a better triangle
-//     var mainPath = path1,
-//         pathX = String(x),
-//         space = ' ',
-//         pathY = String(y),
-//         pathEnd = ' Z';
-//     var path = mainPath.concat(pathX,space,pathY,pathEnd);
-
-//     var gaugeData = [{ type: 'scatter',
-//       x: [0], y:[0],
-//         marker: {size: 24, color:'850000'},
-//         showlegend: false,
-//         name:'times per week',
-//         text: wFreq,
-//         hoverinfo: 'text+name'},
-//       { values: [81/9,81/9,81/9,81/9,81/9,81/9,81/9,81/9,81/9,81],
-//       rotation: 90,
-//       text: ['0-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9', ''],
-//       textinfo: 'text',
-//       textposition:'inside',
-//       direction: 'clockwise',
-//       marker: {
-//         colors:['#fcf2fa',
-//         '#fae6f5',
-//         '#f7d9f0',
-//         '#f5cceb',
-//         '#f2bfe6',
-//         '#f0b2e0',
-//        '#eda6db',
-//         '#eb99d6',
-//         '#e88cd1',
-//         '#ffffff'
-//       ]                   
-//       },
+      var donutData = [{
+        values: graphData.map(d => d.original_interest_rate),
+        labels: graphData.map(d => d.original_interest_rate),
+        domain: {column: 0},
+        name: 'Original Rate',
+        hoverinfo: 'label+name',
+        hole: .4,
+        type: 'pie'
+      },{
+        values: graphData.map(d => d.current_interest_rate),
+        labels:  graphData.map(d => d.current_interest_rate),
+        textposition: 'inside',
+        domain: {column: 1},
+        name: 'Current Rate',
+        hoverinfo: 'label+name',
+        hole: .4,
+        type: 'pie'
+      }];
       
-//       labels: ['0-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9', ''],
-//       hoverinfo: 'label',
-//       hole: .5,
-//       type: 'pie',
-//       showlegend: false
-//     }];
+      var layout = {
+        title: 'Comparison of Interest Rates',
+        annotations: [
+          {
+            font: {
+              size: 14
+            },
+            showarrow: false,
+            text: 'Original<br>Interest<br>Rate',
+            x: 0.16,
+            y: 0.5
+          },
+          {
+            font: {
+              size: 14
+            },
+            showarrow: false,
+            text: 'Current <br> Interest <br> Rate',
+            x: 0.85,
+            y: 0.5
+          }
+        ],
+        height: 400,
+        width: 600,
+        showlegend: false,
+        grid: {rows: 1, columns: 2}
+      };
+      
+      Plotly.newPlot('donut', donutData, layout)};
 
-//     var dataLayout = {
-//       title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs Per Week", font: { size: 20 } },
-//       shapes:[{
-//           type: 'path',
-//           path: path,
-//           fillcolor: '850000',
-//           line: {
-//             color: '850000'
-//           }
-//         }],
-//       height: 500,
-//       width: 500,
-//       xaxis: {zeroline:false, showticklabels:false,
-//                 showgrid: false, range: [-1, 1]},
-//       yaxis: {zeroline:false, showticklabels:false,
-//                 showgrid: false, range: [-1, 1]}
-//     };
-    
-//     Plotly.newPlot('gauge', gaugeData, dataLayout);
-//   })
-// };
