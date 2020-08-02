@@ -222,6 +222,12 @@ The first google slide looks like the following:
 
 The final dashboard represents loan data based on the seller. The dropdown option includes all the banks from our dataset. For the purposes of the dashboard only 500 rows of our dataset were used. To refresh the page, click on the title. 
 
+#### Files corresponding to the dashboard
+
+1. plots.js file includes the build-up of the charts and variables used in each chart
+2. index.html file has the layout of the dashboard 
+3. style.css file shows th styling of the dashboard with the background image and text colouring. 
+
 ### Bar Chart
 
 The first bar chart shows the amount of unpaid principal balance based on the state. By selecting the seller in the dropdown options, we can see which state has a high number of outstanding balances. The higher the unpaid principal balance the higher the application for loans in that particular state. For example: if we select ‘Wells Fargo Bank’ the chart will show TX and FL as the states with the highest unpaid principle. When we conducted our exploratory analysis of our data, the count of property per state were the highest in TX, FL and CA. 
