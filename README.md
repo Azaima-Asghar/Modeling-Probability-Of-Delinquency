@@ -179,14 +179,6 @@ State Analysis reflects and measures on all 52 States and Territories of the cou
 
 ![State_View](Images/state_vs_state.png)
 
-## *Google Slides*
-
-Link to the google slides: https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kSP0E/edit?usp=sharing 
-
-The first google slide looks like the following:
-
-![Google_slides](Images/Google_slides.png)
-
 ## Final Dashboard
 
 The final dashboard represents loan data based on the seller. The dropdown option includes all the banks from our dataset. For the purposes of the dashboard only 500 rows of our dataset were used. To refresh the page, click on the title. 
@@ -214,4 +206,21 @@ The third bubble chart shows the loan applicant’s debt to income ratio and the
 ![Dash1](https://github.com/Azaima-Asghar/Modeling-Probability-Of-Delinquency/blob/kalkidancircleweek3/final%20dashboard%201.jpg)
 ![Dash2](https://github.com/Azaima-Asghar/Modeling-Probability-Of-Delinquency/blob/kalkidancircleweek3/final%20dashboard%202.jpg)
 
+## *Google Slides*
 
+### *Link to the google slides:* https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kSP0E/edit?usp=sharing 
+
+The first google slide looks like the following:
+
+![Google_slides](Images/Google_slides.png)
+
+### *Updating The Google Slides*
+
+The google slides now address the following:
+
+* Project topic and reason it was selected.
+* Description of the data and where it was sourced.
+* Questions the data intends to answer.
+Description of the data exploration your team conducted
+Description of the analysis conducted on the data
+Recount of the different technologies, tools, languages, and algorithms used throughout the project
