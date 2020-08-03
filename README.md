@@ -2,23 +2,19 @@
 
 ## *Group Name: Team 7*
 
-## *First Segment*
-
 ## *Group Members*
 
-Azaima Azghar: Repository Manager.
+### *Azaima Azghar*
 
-Colin Wallace: ; Machine Learning Architect.
+### *Colin Wallace*
 
-Kalkidan Alemayehu:  Database Manager.
+### *Kalkidan Alemayehu*
 
-Osama Ali:  Technology Manager.
+### *Osama Ali*
 
 ## *Selected topic*
 
-
-Modeling probability of  mortgage application
-default.
+### *Modeling Probability Of Mortgage Delinquency.*
 
 ![Project Overview](Images/Project_overview_png.png)
 
@@ -59,9 +55,9 @@ Link: https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-
 * Visual Studio Code.
 * Microsoft Excel.
 
-PLAN: The acquisition data and the performance data are merged on common feature 'LOAN IDENTIFIER'.We want to get more satasets for mortgage and merge them as well down the road to include macro variables such as employment and unemployment.
+The acquisition data and the performance data were merged on common feature 'LOAN IDENTIFIER'.
 
-## *What Will Be Used For Each Section?*
+## *What Was Used For Each Section?*
 
 *Postgress*: Database Management, Organizing tables, removing columns which dont provide value.
 
@@ -74,16 +70,6 @@ PLAN: The acquisition data and the performance data are merged on common feature
 *Visual Studio Code*: Updating the readme files in the branches. 
 
 *Microsoft Excel*: Evaluating our dataset on a high level.
-
-## *How Will The Dashboard Be Built?*
-
-Dashboard will probably be built using python plotly and dash.
-
-## *Description Of The Communication Protocols.*
-
-Team 7 has a shared slack channel that includes all four members of the team: Colin Wallace (Triangle role), Kalkidan Alemayehu (Circle role), Osama Ali (X role) and Azaima Asghar (Square Role). We communicate through this channel and all four of us are very active in this channel, we discuss our progress and our difficulties with others. We also do some meetings every other day or when it is required to meet to discuss the next steps. Everyone is happy to help each other if someone faces some issue. Going forward, we plan to learn plotly dash to create the dashboard for our project, since we will be learning something new we all will be trying to understand it and work together to create the dashboard. 
-
-Starting next week we will clean the present data properly and also look for other datasets that will contain additional macro variables. All in all, with our role duties we all plan to code and help each other get the job done early and leave some additional time to go over our work and try to make it even better.
 
 ## *Database Integration*
 
@@ -103,17 +89,7 @@ Using pgadmin we will create the relationship schema of the datasets, which are 
 
 ![Project Overview](Images/pgAdmin.png)
 
-## *Second Segment*
-
-Azaima Azghar: Circle role; Analysis -- Repository(CircleWeek2).
-
-Colin Wallace: Triangle role; Database -- Repository(TriangleWeek2).
-
-Kalkidan Alemayehu: X role; Dashboard -- Repository(XWeek2).
-
-Osama Ali: Square role; Machine Learning -- Repository(SquareWeek2).
-
-## *Refine The Machine Learning Model*
+## *Setting up The Database For The Machine Learning Model*
 
 Colin used his AWS account, and set up a RDS on a Canada (Central) server. The DB, named team7, is postgreSQL, and currently contains five tables. The "acquisition" and "performance" tables are extracted, cleaned, and slightly transformed from the original Fannie Mae dataset. The .ipynb code performing this ETL can be found in "Cleaned_Performance_data.ipynb" and "Cleaning Acquisition Data.ipynb".
 
@@ -136,20 +112,6 @@ The data is split into the target array ("Delinquency"), and the feature matrix.
 The current model takes 139 variables of input, densely connected to a layer of RelU neurons, followed by another 7 dense layers of Tanh neurons. The final output neuron is a single sigmoid, predicting classification. This structure, and the hyperparameters used while fitting, are likely to change as we transform the input data and try to improve results.
 
 The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 80% after only 70 epochs. 
-
-
-
-## StoryBoard
-
-#### To create our storyboard we used an online interactive program called draw.io. 
-###### To open the storyboard.drawio file first, download it to your local directory second, open the draw.io webpage and third, open the file in the program.
-The image below shows our storyboard for our potential dashboard. The dashboard will be interactive by using a filter bar located above the charts.
-
-![storyboard](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/XWeek2/storyboard1.jpg)
-
-The zoomed in image shows how the interactive portion of our dashboard would work. Once a seller is picked the bar and bubbles charts will display data pertaining to that specific seller. 
-
-![storyboard](https://github.com/Azaima-Asghar/Modeling-probability-of-default/blob/XWeek2/storyboard2.jpg)
 
 ## *Analysis*
 
