@@ -1,4 +1,4 @@
-# *Modeling Probablity Of Default*
+# *Modeling Probablity Of Mortgage Delinquency*
 
 ## *Group Name: Team 7*
 
