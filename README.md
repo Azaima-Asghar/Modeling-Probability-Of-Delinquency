@@ -221,6 +221,7 @@ The google slides now address the following:
 * Project topic and reason it was selected.
 * Description of the data and where it was sourced.
 * Questions the data intends to answer.
-Description of the data exploration your team conducted
-Description of the analysis conducted on the data
-Recount of the different technologies, tools, languages, and algorithms used throughout the project
+* Description of the data exploration that was conducted.
+* Description of the analysis conducted on the data.
+* Recount of the different technologies, tools, languages, and algorithms used throughout the project.
+
