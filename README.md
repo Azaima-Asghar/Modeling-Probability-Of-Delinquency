@@ -214,7 +214,7 @@ https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kS
 
 The first google slide looks like the following:
 
-![Google_slides](Images/google_slides.png)
+![Google_slides](Images/Google_slides.png)
 
 ### *Updating The Google Slides*
 
