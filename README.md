@@ -50,12 +50,12 @@ Link: https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-
 * Google Colabs/Jupyter Notebook.
 * Amazon Web Services (AWS).
 * Github.
-* Python, Javascript, HTML
-* Flask
+* Python, Javascript, HTML.
+* Flask.
 * Visual Studio Code.
 * Microsoft Excel.
-* QuickDBD
-* Draw io
+* QuickDBD.
+* Draw io.
 
 The acquisition data and the performance data were merged on common feature 'LOAN IDENTIFIER'.
 
