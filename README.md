@@ -208,7 +208,8 @@ The third bubble chart shows the loan applicant’s debt to income ratio and the
 
 ## *Google Slides*
 
-### *Link to the google slides:* https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kSP0E/edit?usp=sharing 
+### *Link to the google slides:* 
+https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kSP0E/edit?usp=sharing 
 
 The first google slide looks like the following:
 
