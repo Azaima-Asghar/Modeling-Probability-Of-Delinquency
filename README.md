@@ -44,16 +44,18 @@ Link: https://www.fanniemae.com/portal/funding-the-market/data/loan-performance-
 
 ## *Resources*
 
-* Data Source: Mortgage Data From Fannie Mae.
-
-    * Acquisition and Performance Data.
+* Data Source: Mortgage Data From Fannie Mae (Acquisition and Performance Data).
 
 * pgAdmin/postgressSQL.
 * Google Colabs/Jupyter Notebook.
 * Amazon Web Services (AWS).
 * Github.
+* Python, Javascript, HTML
+* Flask
 * Visual Studio Code.
 * Microsoft Excel.
+* QuickDBD
+* Draw io
 
 The acquisition data and the performance data were merged on common feature 'LOAN IDENTIFIER'.
 
