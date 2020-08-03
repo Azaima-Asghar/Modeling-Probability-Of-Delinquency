@@ -133,10 +133,11 @@ A "Delinquency" boolean is a generated from each loan's Performance data.
 
 The data is split into the target array ("Delinquency"), and the feature matrix. The data is further split into training and testing sets, before being scaled according to the training data. A logistic regression is modelled, but doesn't appear to fit correctly. The deep Forest model provides improved results.
 
-
 The current model takes 139 variables of input, densely connected to a layer of RelU neurons, followed by another 7 dense layers of Tanh neurons. The final output neuron is a single sigmoid, predicting classification. This structure, and the hyperparameters used while fitting, are likely to change as we transform the input data and try to improve results.
 
-The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 76% after 100 epochs. Our loss is still 48% which is very high, we will need to fine tune it more.
+The results of this neural network during and after fitting are expected given the circumstances. The first epoch's accuracy is around 60%, but improves with iteration up to 80% after only 70 epochs. 
+
+
 
 ## StoryBoard
 
@@ -210,6 +211,12 @@ Loan age is the number of calendar months since the mortgage loan origination da
 
 Original Combined Loan-to-Value (CLTV) is a ratio calculated at the time of origination for a mortgage loan. The CLTV reflects the loan-to-value ratio inclusive of all loans secured by a mortgaged property on the origination date of the underlying mortgage loan.The. mean of original combined loan-to-value is 94 and most of the mortgages have this ratio.
 
+#### *State Analysis*
+
+State Analysis reflects and measures on all 52 States and Territories of the country to determine if there are some States which perform better than others. The country as a whole has 21.44% Delinquncy Ratio. Please see chart below for a breakdown of all the states
+
+![State_View](Images/state_vs_state.png)
+
 ## *Google Slides*
 
 Link to the google slides: https://docs.google.com/presentation/d/1iNZQTNkwcgDTv_H8VmUclcfFCg5ulul_qshY60kSP0E/edit?usp=sharing 
@@ -217,3 +224,32 @@ Link to the google slides: https://docs.google.com/presentation/d/1iNZQTNkwcgDTv
 The first google slide looks like the following:
 
 ![Google_slides](Images/Google_slides.png)
+
+## Final Dashboard
+
+The final dashboard represents loan data based on the seller. The dropdown option includes all the banks from our dataset. For the purposes of the dashboard only 500 rows of our dataset were used. To refresh the page, click on the title. 
+
+#### Files corresponding to the dashboard
+
+1. plots.js file includes the build-up of the charts and variables used in each chart
+2. index.html file has the layout of the dashboard 
+3. style.css file shows th styling of the dashboard with the background image and text colouring. 
+
+### Bar Chart
+
+The first bar chart shows the amount of unpaid principal balance based on the state. By selecting the seller in the dropdown options, we can see which state has a high number of outstanding balances. The higher the unpaid principal balance the higher the application for loans in that particular state. For example: if we select ‘Wells Fargo Bank’ the chart will show TX and FL as the states with the highest unpaid principle. When we conducted our exploratory analysis of our data, the count of property per state were the highest in TX, FL and CA. 
+
+### Donut Chart
+
+The second donut chart compares the original interest rate and the current interest rate given by the banks. By looking at the donut chart, we can see that the bank ‘Wells Fargo Bank’ changed their interest rate as time went by. The original interest rate tends to be the same for a large percentage of the loans and in this case, 88.4% of the loans were given a 5% interest rate while 11.6% of the loans had an interest rate of 6%. The current interest rate has changed significantly as only 16.3% of the loans have a rate of 5% and the rest are either lower than the 5% rate or between 5-6% rates. 
+
+### Bubble Chart 
+
+The third bubble chart shows the loan applicant’s debt to income ratio and their credit score. The colour of the bubbles represents the borrower’s credit score and the size of the bubble represents the debt to income ratio. With this, we can visuals which borrower is most likely to consistently pay their loan and avoid the delinquency status. For example: based on ‘Wells Fargo Bank’ results we can see a cluster of borrowers with a high credit score and a high debt to income ratio. Although, this data is clustered at the high end of both variables, it is important to not that the most ideal borrower would have a lower debt to income ratio with a high credit score. 
+
+### Dashboard
+
+![Dash1](https://github.com/Azaima-Asghar/Modeling-Probability-Of-Delinquency/blob/kalkidancircleweek3/final%20dashboard%201.jpg)
+![Dash2](https://github.com/Azaima-Asghar/Modeling-Probability-Of-Delinquency/blob/kalkidancircleweek3/final%20dashboard%202.jpg)
+
+
