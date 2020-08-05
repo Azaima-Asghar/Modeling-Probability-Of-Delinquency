@@ -1,3 +1,5 @@
+//Retrieve data from the csv file using d3 select function 
+
 var data
 
 d3.csv('cleaned_merged_data.csv').then(d => {
@@ -6,13 +8,13 @@ d3.csv('cleaned_merged_data.csv').then(d => {
 
 })
 
-
+// define initialize function 
 
 function init() {
   var selector = d3.select("#selDataset");  
     console.log(data);
 
-    unique_names = [...new Set(data.map(d => d.seller_name))]
+    unique_names = [...new Set(data.map(d => d.seller_name))] // interactive selection based on seller name
       
     var sampleSeller = unique_names.forEach(val => {
       selector.append('option').text(val);
@@ -24,6 +26,8 @@ function optionChanged(newSeller) {
   buildBubble(newSeller);
   buildDonut(newSeller);
 };
+
+// Build first chart 
 
 function buildCharts(sampleSeller) {
   
@@ -51,7 +55,7 @@ function buildCharts(sampleSeller) {
 
 };
 
-
+// Build bubble chart 
 
 function buildBubble(sampleSeller) {
 
@@ -87,7 +91,7 @@ function buildBubble(sampleSeller) {
 
     };
 
-
+// Build donut chart 
     function buildDonut(sampleSeller) {
 
       graphData = data.filter(d => d.seller_name === sampleSeller);
