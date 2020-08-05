@@ -1,0 +1,11 @@
+.jumbotron {
+    background-image: url(mortgage.jpg);
+    background-size: 71% 130%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: black;
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    color: white;
+}
