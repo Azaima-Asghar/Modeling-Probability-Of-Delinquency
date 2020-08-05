@@ -205,6 +205,8 @@ The third bubble chart shows the loan applicant’s debt to income ratio and the
 
 ### *Dashboard*
 
+Click link to visualize data: https://azaima-asghar.github.io/Modeling-Probability-Of-Delinquency/index.html
+
 ![Dash1](Images/final_dashboard1.jpg)
 
 ![Dash2](Images/final_dashboard2.jpg)
