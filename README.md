@@ -181,6 +181,8 @@ State Analysis reflects and measures on all 52 States and Territories of the cou
 
 ![State_View](Images/state_vs_state.png)
 
+![State_Map](Images/State_map_view)
+
 ## *Final Dashboard*
 
 The final dashboard represents loan data based on the seller. The dropdown option includes all the banks from our dataset. For the purposes of the dashboard only 500 rows of our dataset were used. To refresh the page, click on the title. 
