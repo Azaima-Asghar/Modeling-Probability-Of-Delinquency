@@ -35,23 +35,28 @@
       <div class="col-md-7">
         <div class="well">
           <h3>Use the interactive charts below to explore the dataset</h3>
+          <h3>Seller Name:</h3>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
           </div>
           </div>
         </div>
     <div class="row">
-      <div class="col-md-7">
-        <div class="well">
-          <h3>Seller Name:</h3>
-          <!-- <select id="selDataset"></select>  -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
+
       </div>
       <div class="col-md-12">
         <div id="bar"></div>
       </div>
-      <div class="col-md-8">
+    
+      <div class="col-md-4">
         <div id="donut"></div>
       </div>
+
+<!-- trying out guage data -->
+      <div class="col-md-4">
+        <div id="donut"></div>
+      </div>
+
+
       <div class="col-md-12">
         <div id="bubble"></div>
       </div>
