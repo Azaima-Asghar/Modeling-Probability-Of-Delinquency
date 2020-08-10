@@ -181,7 +181,7 @@ State Analysis reflects and measures on all 52 States and Territories of the cou
 
 ![State_View](Images/state_vs_state.png)
 
-![State_Map](Images/State_map_view)
+![State_Map](Images/State_map_view.png)
 
 ## *Final Dashboard*
 
