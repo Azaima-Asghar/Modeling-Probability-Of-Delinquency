@@ -1,0 +1,5 @@
+POSTGRES_ADDRESS = "team7.cpliq65f81hf.ca-central-1.rds.amazonaws.com"
+POSTGRES_PORT = "5432"
+POSTGRES_USERNAME = "team7"
+POSTGRES_PASSWORD = "password"
+POSTGRES_DBNAME = "modelingPD"
